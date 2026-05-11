@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ProductPlain</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="floating-products" aria-hidden="true">
+        <div class="float-product food one"><span class="product-icon can"></span><span>Red Bull</span></div>
+        <div class="float-product skin two"><span class="product-icon tube"></span><span>CeraVe</span></div>
+        <div class="float-product home three"><span class="product-icon bottle"></span><span>Tide Pods</span></div>
+        <div class="float-product food four"><span class="product-icon bag"></span><span>Takis</span></div>
+        <div class="float-product skin five"><span class="product-icon dropper"></span><span>Niacinamide</span></div>
+        <div class="float-product home six"><span class="product-icon spray"></span><span>Windex</span></div>
+      </div>
+
+      <section class="search-hero" aria-labelledby="page-title">
+        <p class="brand">ProductPlain</p>
+        <h1 id="page-title">Understand any product in plain English.</h1>
+        <p class="intro">Start typing a product name and ProductPlain will suggest matches, then explain what is commonly inside and what to watch for.</p>
+
+        <form class="search-card" id="product-form">
+          <label for="product-name">Search by product name</label>
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"></path>
+            </svg>
+            <input id="product-name" name="product-name" type="search" autocomplete="off" placeholder="Try Takis, Tide Pods, or CeraVe" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions" required>
+            <button type="submit" aria-label="Explain product">Explain</button>
+          </div>
+          <div class="suggestions" id="suggestions" role="listbox" aria-label="Suggested products"></div>
+        </form>
+
+        <div class="quick-picks" aria-label="Popular product searches">
+          <button type="button" data-product="CeraVe Foaming Cleanser">CeraVe Foaming Cleanser</button>
+          <button type="button" data-product="Takis Blue Heat">Takis Blue Heat</button>
+          <button type="button" data-product="Tide Pods Original">Tide Pods Original</button>
+        </div>
+      </section>
+
+      <article class="result-card" id="result-card" aria-live="polite">
+        <div class="result-topline">
+          <div>
+            <p class="result-label">Plain result</p>
+            <h2 id="result-title">CeraVe Foaming Cleanser</h2>
+          </div>
+          <div class="plain-score" aria-label="Plain score">
+            <span id="score-number">82</span>
+            <small>Plain Score</small>
+          </div>
+        </div>
+
+        <p class="summary" id="summary">A gentle face wash usually built around water, mild cleansing agents, ceramides, niacinamide, and texture helpers.</p>
+
+        <div class="insight-grid">
+          <section>
+            <h3>What it is</h3>
+            <p id="what-it-is">A cleanser made to remove oil and dirt without stripping the skin barrier.</p>
+          </section>
+          <section>
+            <h3>Things to watch</h3>
+            <p id="watch-outs">May bother very dry or reactive skin if used too often.</p>
+          </section>
+        </div>
+
+        <section class="ingredient-list" aria-labelledby="ingredients-title">
+          <h3 id="ingredients-title">Plain ingredient breakdown</h3>
+          <ul id="ingredient-list">
+            <li><strong>Mild cleansers:</strong> Help lift oil and daily buildup from the skin.</li>
+            <li><strong>Ceramides:</strong> Support the skin barrier.</li>
+            <li><strong>Niacinamide:</strong> Can calm redness and support an even feel.</li>
+          </ul>
+        </section>
+
+        <section class="chips" aria-label="Product notes" id="notes">
+          <span>Fragrance-free option</span>
+          <span>Sensitive skin friendly</span>
+          <span>Check for dryness</span>
+        </section>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
